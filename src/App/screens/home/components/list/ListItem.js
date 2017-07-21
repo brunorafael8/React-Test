@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const ListItem = ({url,title,released}) =>
 	<div style={ styles.listItem }>
 			<img style={styles.img}alt="foto" src={url}/>
-			<a href="/">{title}</a>
+			<Link to="/infos">{title}</Link>
 			<p>{released}</p>
 		</div>;
 const styles = {

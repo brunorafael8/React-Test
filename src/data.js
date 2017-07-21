@@ -1,4 +1,4 @@
-export default {
+const EpsApi = {
   eps: [
     {
       'id': 0,
@@ -41,6 +41,11 @@ export default {
       'url': 'https://upload.wikimedia.org/wikipedia/en/c/c9/Linkin_Park_-_Living_Things.jpg',
 			'title': 'Living Thingst',
 			'released': '	June 20, 2012'
-    },
-  ]
+		},
+	],
+	all: function() {return this.eps},
+	get: function(id) {
+		return this.players.find(id)
+	}
 }
+export default EpsApi
