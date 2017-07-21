@@ -1,11 +1,17 @@
-'use strict'
-
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Header from './components/header/Header'
+import List from './components/list/List'
 
-const Home = () => (
-  <Header />
-)
-
+class Home extends PureComponent {
+  
+  render() {
+    return(
+      <div>
+        <Header />
+        <List/>
+      </div>
+    )
+  }
+}
 export default Home
