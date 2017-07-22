@@ -22,6 +22,7 @@ const Item = styled.div`
     justify-Content: center;
     flex-Direction: column;
     text-Align: center;
+    align-items: center;
 `;
 const ItemImg = styled.img`
   height: 100%;

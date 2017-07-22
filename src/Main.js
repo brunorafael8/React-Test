@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
-import Home from './App/screens/home/index'
-import Details from './App/screens/details/index'
+import Home from './App/screens/home/Home'
+import Details from './App/screens/details/Details'
 
 const Main = () => (
   <main className="container">
@@ -14,5 +14,4 @@ const Main = () => (
     </Switch>
   </main>
 )
-
 export default Main
