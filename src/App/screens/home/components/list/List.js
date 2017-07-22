@@ -8,6 +8,7 @@ const List = () => (
         {
             EpsApi.all().map(eps => 
             <ListItem key={eps.id} 
+              id={eps.id}
               url={eps.url}   
               title={eps.title} 
               released={eps.released} />)

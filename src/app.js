@@ -12,7 +12,6 @@ class App extends PureComponent {
       <div >
         <Header />
         <Main />
-        <h1>Bem Vindo !!</h1>
       </div>
     )
   }

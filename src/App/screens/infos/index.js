@@ -1,11 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import EpsApi from 'src/data'
+import { Link } from 'react-router-dom'
+const Infos = (props) => {
+  const infos = EpsApi.get(
+    parseInt(props.match.params.id, 0)
+  )
+  return (
+    <div>
+      <img src={infos.url} alt="img"/>
+      <h1>{infos.title}</h1><span>{infos.released}</span>
+      <p>{infos.description}</p>
+      <Link to='/'>Back</Link>
+    </div>
+  )
+}
 
-const Infos = () => (
-
-      <div>
-        <h1>OIII BEM VINDO AOS DETALHES</h1>
-      </div>
-    )
- 
 export default Infos
