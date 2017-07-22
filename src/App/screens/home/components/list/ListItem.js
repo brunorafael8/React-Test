@@ -8,14 +8,15 @@ const ListItem = ({url,title,released, id}) =>
   <Item>
     <Link style={styles.linkItem} to={`/details/${id}`}>
       <img style={styles.img}alt="foto" src={url}/>
-      <h2 to={`/details/${id}`}>{title}</h2>
-      <p>{released}</p>
+      <h2 style={styles.title} to={`/details/${id}`}>{title}</h2>
+      <span style={styles.date}>{released}</span>
     </Link>
   </Item>;
 
 const Item = styled.div`
   align-Items: center;
-  background-Color: #66626E;
+  background-Color: #DBDBDB;
+  opacity: 10;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -39,6 +40,14 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     color: '#fff'
+  },
+  title: {
+    color: '#000',
+    textDecoration: 'underline',
+    marginBottom: 4
+  },
+  date: {
+    color: '#000'
   }
 }
 export default ListItem
