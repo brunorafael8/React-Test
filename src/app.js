@@ -6,14 +6,14 @@ import Loadable from 'react-loadable'
 import './css/normalize.css'
 import './css/base.css'
 
-function MyLoadingComponent() {
- return <div>Loading...</div>;
+function MyLoadingComponent () {
+  return <div>Loading...</div>
 }
 
 const LoadableComponent = Loadable({
   loader: () => import('./Main'),
-  loading: MyLoadingComponent,  
-});
+  loading: MyLoadingComponent
+})
 class App extends PureComponent {
   render () {
     return (

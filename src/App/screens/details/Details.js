@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import EpsApi from 'src/data'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components';
+import styled from 'styled-components'
 const Details = (props) => {
   const details = EpsApi.get(
     parseInt(props.match.params.id, 0)
