@@ -1,27 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+
 
 const ListItem = ({url,title,released, id}) =>
-	<div style={ styles.listItem }>
-			<img style={styles.img}alt="foto" src={url}/>
-			<Link to={`/infos/${id}`}>{title}</Link>
-			<p>{released}</p>
-		</div>;
+  <Item>
+      <img style={styles.img}alt="foto" src={url}/>
+      <Link to={`/details/${id}`}>{title}</Link>
+      <p>{released}</p>
+  </Item>;
+
+const Item = styled.div`
+  align-Items: center;
+  background-Color: #66626E;
+  color: #fff;
+  display: flex;
+  flex-Direction: column;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+
+  @media(min-width: 550px) {
+    width: 40%;
+  }
+`;
 const styles = {
-	listItem: {
-		alignItems: 'center',
-		backgroundColor: '#66626E',
-		color: '#fff',
-		display: 'flex',
-		flexDirection: 'column',
-		width: '40%',
-		padding: '10px',
-		margin: '10px'
-	},
-	img: {
-		margin: '0 auto',
-		width: '70%'
-	}
+  img: {
+    margin: '0 auto',
+    width: '70%'
+  },
 }
 export default ListItem

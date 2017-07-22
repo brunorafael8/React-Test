@@ -1,14 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
 import Home from './App/screens/home/index'
-import Infos from './App/screens/infos/index'
+import Details from './App/screens/details/index'
 
 const Main = () => (
-  <main>
+  <main className="container">
     <Switch>
       <Route exact path="/" component={Home}/>       
-      <Route exact path="/infos" component={Infos}/>       
-    	<Route path="/infos/:id" component={Infos}/> 
+      <Route exact path="/details" component={Details}/>       
+    	<Route path="/details/:id" component={Details}/> 
+      <Route exact path="*" component={Home}/>     
     </Switch>
   </main>
 )

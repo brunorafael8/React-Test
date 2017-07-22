@@ -1,15 +1,19 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import List from './components/list/List'
+import Loadable from 'react-loadable';
 
-class Home extends PureComponent {
-  
-  render() {
-    return(
+function MyLoadingComponent() {
+ return <div>Loading...</div>;
+}
+
+const LoadableComponent = Loadable({
+  loader: () => import('./components/list/List'),
+  loading: MyLoadingComponent,  
+});
+
+const Home = () => (
       <div>
-        <List/>
+        <LoadableComponent/>
       </div>
     )
-  }
-}
 export default Home
