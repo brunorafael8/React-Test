@@ -7,7 +7,7 @@ function MyLoadingComponent() {
 }
 
 const LoadableComponent = Loadable({
-  loader: () => import('./components/list/List'),
+  loader: () => import('./List.js'),
   loading: MyLoadingComponent,  
 });
 

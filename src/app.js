@@ -1,8 +1,9 @@
 'use strict'
 
 import React, { PureComponent } from 'react'
-import Header from './App/components/header/Header'
+import Header from './components/header/Header.js'
 import Loadable from 'react-loadable'
+import {Link} from 'react-router-dom';
 import './css/normalize.css'
 import './css/base.css'
 
@@ -17,11 +18,16 @@ const LoadableComponent = Loadable({
 class App extends PureComponent {
   render () {
     return (
-      <div >
-        <Header />
+      <div>
+        <Link style={styles.topoLink} to={`/`}><Header title={'Linkin Park discography'} /></Link>
         <LoadableComponent />
       </div>
     )
+  }
+}
+const styles = {
+  topoLink: {
+    textDecoration: 'none'
   }
 }
 
