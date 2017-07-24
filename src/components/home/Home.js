@@ -11,9 +11,8 @@ const LoadableComponent = Loadable({
   loading: MyLoadingComponent,  
 });
 
-const Home = () => (
+const Home = () =>
       <div>
         <LoadableComponent/>
-      </div>
-    )
+      </div>;
 export default Home
