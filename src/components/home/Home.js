@@ -7,13 +7,12 @@ function MyLoadingComponent() {
 }
 
 const LoadableComponent = Loadable({
-  loader: () => import('./components/list/List'),
+  loader: () => import('./List.js'),
   loading: MyLoadingComponent,  
 });
 
-const Home = () => (
+const Home = () =>
       <div>
         <LoadableComponent/>
-      </div>
-    )
+      </div>;
 export default Home

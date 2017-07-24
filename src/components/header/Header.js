@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom';
 
-const Header = () => (
-  <div>
-    <Link style={styles.headerLink} to={`/`}>
-        <h1 style={styles.nav__title}>Linkin Park discography</h1>
+const Header = ({title}) => 
+    <header style={styles.header}>
+        <h1 style={styles.nav__title}>{title}</h1>
         <svg style={styles.nav__logo} width="100px" height="100px" viewBox="-1.5 295.948 169.954 199.718">
         <g id="icons">
             <g>
@@ -16,11 +14,10 @@ const Header = () => (
             </g>
         </g>
         </svg>
-    </Link>
-  </div>
-)
+    </header>;
+
 const styles = {
-  headerLink: {
+  header: {
     backgroundColor: '#000',
     display: 'flex',
     justifyContent: 'center',

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './App/screens/home/Home'
-import Details from './App/screens/details/Details'
+import Home from './components/home/Home.js'
+import Details from './components/details/Details.js'
 
 const Main = () => (
   <main className="container">
