@@ -19,7 +19,7 @@ const List = () => (
 const ListItem = ({url,title,released, id}) =>
   <Item>
     <Link style={styles.linkItem} to={`/details/${id}`}>
-      <img style={styles.img}alt="foto" src={url}/>
+      <img style={styles.img} alt="foto" src={url}/>
       <h2 style={styles.title} to={`/details/${id}`}>{title}</h2>
       <span style={styles.date}>{released}</span>
     </Link>
