@@ -41,7 +41,6 @@
     "snazzy": "^6.0.0",
     "standard": "^8.6.0",
     "standard-loader": "^5.0.0",
-    "storybook-router": "^0.2.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
